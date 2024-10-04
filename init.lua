@@ -189,6 +189,15 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<leader>wv', '<C-w>v', { desc = 'Split [w]indow [v]ertically' })
+vim.keymap.set('n', '<leader>wh', '<C-w>s', { desc = 'Split [w]indow [v]ertically' })
+vim.keymap.set('n', '<leader>we', '<C-w>=', { desc = 'Split [w]indow [e]qually' })
+vim.keymap.set('n', '<leader>wx', ':close<CR>', { desc = 'Close [w]indow' })
+
+vim.keymap.set('n', '<leader>wto', ':tabnew<CR>', { desc = '[Tab] [n]ew' })
+vim.keymap.set('n', '<leader>wtx', ':tabclose<CR>', { desc = '[T]ab close' })
+vim.keymap.set('n', '<leader>wtn', ':tabn<CR>', { desc = '[T]ab [n]ext' })
+vim.keymap.set('n', '<leader>wtp', ':tabp<CR>', { desc = '[T]ab [p]revious' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -319,6 +328,7 @@ require('lazy').setup({
         { '<leader>r', group = '[R]ename' },
         { '<leader>s', group = '[S]earch' },
         { '<leader>w', group = '[W]orkspace' },
+        { '<leader>wt', group = '[T]abs' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
